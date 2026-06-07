@@ -110,6 +110,34 @@ body::after {
 }
 .dateline-inner span:nth-child(2) a:hover::after { transform: scaleX(1); transform-origin: left; }
 .dateline-inner span:nth-child(2) a:hover { color: var(--accent); }
+.dateline-inner span:nth-child(2) .resume-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  background: transparent;
+  color: var(--ink);
+  padding: 0.3rem 0.7rem;
+  font-weight: 600;
+  border: 1.5px solid var(--ink);
+  letter-spacing: 0.1em;
+  transition: background 0.22s, color 0.22s, border-color 0.22s, transform 0.2s;
+  position: relative;
+  margin-left: 0.25rem;
+}
+.dateline-inner span:nth-child(2) .resume-download::after { display: none; }
+.dateline-inner span:nth-child(2) .resume-download:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+  transform: translateY(-1px);
+}
+.dateline-inner span:nth-child(2) .resume-download .dl-arrow {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.dateline-inner span:nth-child(2) .resume-download:hover .dl-arrow {
+  transform: translateY(2px);
+}
 
 .live-dot {
   width: 8px; height: 8px; border-radius: 50%;
@@ -1972,6 +2000,7 @@ section.in .lede .hl,
   }
   .masthead-title .letter { opacity: 1; transform: none; animation: none; }
 }
+
 </style>
 </head>
 <body>
@@ -2000,6 +2029,7 @@ section.in .lede .hl,
       <a href="#github">GitHub</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+      <a class="resume-download" href="Harsha-Vardhan-Jalli-Resume.pdf" download="Harsha-Vardhan-Jalli-Resume.pdf" aria-label="Download Harsha Vardhan Jalli's resume as a PDF">Download Resume <span class="dl-arrow">↓</span></a>
     </span>
     <span>Shipping since Oct '13</span>
   </div>
@@ -3154,6 +3184,13 @@ section.in .lede .hl,
             <div class="value">jalli.harshavardhan@gmail.com</div>
           </div>
           <div class="arrow">SEND →</div>
+        </a>
+        <a class="contact-link" href="Harsha-Vardhan-Jalli-Resume.pdf" download="Harsha-Vardhan-Jalli-Resume.pdf">
+          <div>
+            <div class="label">Resume · Download</div>
+            <div class="value">Harsha Vardhan Jalli · 13 Years</div>
+          </div>
+          <div class="arrow">DOWNLOAD ↓</div>
         </a>
         <a class="contact-link" href="https://github.com/HarshaVardhanJalli" target="_blank" rel="noopener">
           <div>
